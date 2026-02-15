@@ -66,4 +66,7 @@ void loop() {
     Serial.print(",");
     Serial.println(statusFlag);
   }
+  if (lastButtonState==HIGH && currentButtonState==LOW){
+    systemEnabled=!systemEnabled; //Toggle State
+  }
 }
